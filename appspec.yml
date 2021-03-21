@@ -13,7 +13,7 @@ permissions:
       - file
 hooks:
   ApplicationStart:
-    - location: reload-pm2.sh
+    - location: scripts/reload-pm2.sh
       timeout: 300
       runas: ubuntu
   BeforeInstall:
