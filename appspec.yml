@@ -1,7 +1,8 @@
+
 version: 0.0
 os: linux
 files:
-  - source: /public_html
+  - source: /index.html
     destination: /var/www/html/
 permissions:
   - object: /home/ubuntu
@@ -12,7 +13,6 @@ permissions:
       - file
 hooks:
   ApplicationStart:
-    - location: scripts/reload-pm2.sh
+    - location: reload-pm2.sh
       timeout: 300
       runas: ubuntu
-
